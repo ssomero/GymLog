@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exercise.name %>
+</p>
+
+<p>
+  <strong>Main muscles:</strong>
+  <%= @exercise.main_muscles %>
+</p>
+
+<p>
+  <strong>Bodypart:</strong>
+  <%= @exercise.bodypart %>
+</p>
+
+<p>
+  <strong>Force:</strong>
+  <%= @exercise.force %>
+</p>
+
+<p>
+  <strong>Mechanics type:</strong>
+  <%= @exercise.mechanics_type %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>
