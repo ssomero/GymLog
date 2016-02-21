@@ -11,7 +11,3 @@ e2 = Exercise.create name:"Bench press", main_muscles:"Some chest muscle", bodyp
                      mechanics_type:"Compound"
 e3 = Exercise.create name:"Deadlift", main_muscles:"Hamstrings, lower back", bodypart:"Lower body", force:"Pull",
                      mechanics_type:"Compound"
-
-w1 = Workout.create name:"PPL" exercise_id:e1.id
-w2 = Workout.create name:"PHUL" exercise_id:e2.id
-w3 = Workout.create name:"PHAT" exercise_id:e3.id

@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221102317) do
+ActiveRecord::Schema.define(version: 20160221122338) do
 
   create_table "exercise_sets", force: :cascade do |t|
-    t.integer  "exercise_id"
     t.integer  "weight_kg"
     t.integer  "repetition"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "exercise_id"
   end
 
   create_table "exercises", force: :cascade do |t|
