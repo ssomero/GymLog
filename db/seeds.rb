@@ -12,6 +12,8 @@ e2 = Exercise.create name:"Bench press", main_muscles:"Some chest muscle", bodyp
 e3 = Exercise.create name:"Deadlift", main_muscles:"Hamstrings, lower back", bodypart:"Lower body", force:"Pull",
                      mechanics_type:"Compound"
 
-e1.exercise_sets.create exercise_id:e1.id, weight_kg:0, repetition:13
-e2.exercise_sets.create exercise_id:e2.id, weight_kg:90, repetition:6
-e3.exercise_sets.create exercise_id:e3.id, weight_kg:100, repetition:5
+w1 = Workout.create date:DateTime.now, notes:"It was a hard workout"
+
+s1 = ExerciseSet.create exercise_id:e1.id, weight_kg:0, repetition:13, workout_id:w1.id
+s2 = ExerciseSet.create exercise_id:e2.id, weight_kg:90, repetition:6, workout_id:w1.id
+s3 = ExerciseSet.create exercise_id:e3.id, weight_kg:100, repetition:5, workout_id:w1.id

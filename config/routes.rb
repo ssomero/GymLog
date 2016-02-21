@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :workouts
   resources :exercise_sets
   resources :exercises
   # The priority is based upon order of creation: first created -> highest priority.
