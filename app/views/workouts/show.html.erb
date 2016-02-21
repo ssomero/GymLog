@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @workout.date %>
-</p>
+<h3>Date</h3>
+<p><%= @workout.date %></p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @workout.notes %>
-</p>
+<h3>Notes</h3>
+<p><%= @workout.notes %></p>
 
+<table>
+  <thead>
+  <th>Exercise</th>
+  <th>Weight (kg)</th>
+  <th>Repetition</th>
+  </thead>
+  <tbody>
+  <% @workout.exercise_sets.each do |set| %>
+      <tr>
+        <td><%= link_to set.exercise.name, set.exercise %></td>
+        <td><%= set.weight_kg %></td>
+        <td><%= set.repetition %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', workouts_path %>
+<%= link_to 'Workouts list', workouts_path %>
