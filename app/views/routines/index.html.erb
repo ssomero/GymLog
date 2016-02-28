@@ -10,7 +10,13 @@
   </thead>
 
   <tbody>
-
+  <% @routines.each do |routine| %>
+      <% if routine.name %>
+          <tr>
+            <td><%= link_to routine.name, routine %></td>
+          </tr>
+      <% end %>
+  <% end %>
   </tbody>
 </table>
 

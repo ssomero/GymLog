@@ -14,7 +14,29 @@
     <div class="field">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
+
+
+
+      <div class="form-group">
+        <%= f.fields_for :routine_sets do |set| %>
+            <%= set.label :exercise_id, "Exercises" %>
+            <%= set.select :exercise_id, options_from_collection_for_select(@exercises, :id, :name), {:multiple => true} %>
+
+            <%= set.label :sets, "Number of sets" %>
+            <%= set.text_field :sets %>
+
+            <%= set.label :repetition, "Reps" %>
+            <%= set.text_field :repetition %>
+
+            <%= set.label :rest_time, "Rest time" %>
+            <%= set.text_field :rest_time %>
+
+            <%= set.hidden_field :routine_id %>
+        <% end %>
+      </div>
+
     </div>
+
     <div class="actions">
       <%= f.submit %>
     </div>

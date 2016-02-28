@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :exercise_sets
   resources :exercises
   resources :routines
+  resources :routine_sets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

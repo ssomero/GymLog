@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h3><%= @routine.name %></h3>
+<table class="table table-bordered">
+  <thead>
+  <th>Exercise name</th>
+  <th>Sets</th>
+  <th>Reps</th>
+  <th>Rest time</th>
+  </thead>
+  <tbody>
+  <% @routine.routine_sets.each do |set| %>
+      <tr>
+        <td><%= link_to set.exercise.name, set.exercise %></td>
+        <td><%= set.sets %></td>
+        <td><%= set.repetition %></td>
+        <td><%= set.rest_time %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
