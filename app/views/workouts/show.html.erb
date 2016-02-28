@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Date</h3>
-<p><%= @workout.date.to_date %></p>
+<h4>Date: <%= @workout.date.to_date %></h4>
 
-<h3>Notes</h3>
+<h4>Notes</h4>
 <p><%= @workout.notes %></p>
 
-<table>
+<table class="table table-bordered">
   <thead>
-  <th>Exercise</th>
-  <th>Weight (kg)</th>
-  <th>Repetition</th>
+  <th class="col-md-1">Exercise</th>
+  <th class="col-md-1">Weight (kg)</th>
+  <th class="col-md-1">Repetition</th>
   </thead>
   <tbody>
   <% @workout.exercise_sets.each do |set| %>
@@ -22,5 +21,5 @@
   <% end %>
   </tbody>
 </table>
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Workouts list', workouts_path %>
+<%= link_to 'Destroy', @workout, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Edit', edit_workout_path(@workout) %>
