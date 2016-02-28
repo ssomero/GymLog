@@ -20,7 +20,10 @@ group :production do
 end
 
 # Bootstrap
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
+end
 
 
 # Use SCSS for stylesheets
