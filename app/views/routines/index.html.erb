@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Routine', new_routine_path, class: 'btn btn-primary' %>
+
 <h1>Routines</h1>
 
-<table class="table table-hover">
+<table class="table table-bordered">
   <thead>
   <tr>
-    <th>Name</th>
-    <th colspan="3"></th>
+    <th class="col-xs-1">Name</th>
   </tr>
   </thead>
 
@@ -19,7 +20,3 @@
   <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Routine', new_routine_path %>
